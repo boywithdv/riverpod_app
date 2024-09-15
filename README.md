@@ -28,8 +28,8 @@ Riverpod code is written in reference to the above URL
 - [x] FutureProviderで非同期処理を購読する
 - [x] StreamProviderでStreamを購読する
 - [x] ChangeNotifierProviderで状態を購読・操作する
-- [ ] AutoDispose修飾子で、Providerを自動破棄させる
-- [ ] ProviderScopeを使って特定の範囲内で状態を上書きする
+- [x] AutoDispose修飾子で、Providerを自動破棄させる
+- [x] ProviderScopeを使って特定の範囲内で状態を上書きする
 - [ ] Flutter Hooksとは
 - [ ] SharedPreferencesのインスタンスをProviderでキャッシュする
 - [ ] StateNotifierProviderでTheme(ライト・ダーク)を切り替える
