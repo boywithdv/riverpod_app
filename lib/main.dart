@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_app/features/my_provider.dart';
+import 'package:riverpod_app/pages/provider/change_notifier_provider_page.dart';
 
 import 'package:riverpod_app/pages/provider/consumer_widget_sample_page.dart';
 import 'package:riverpod_app/pages/provider/counter_state_provider_page.dart';
@@ -85,6 +86,9 @@ class MyHomePage extends ConsumerWidget {
               MaterialButton(onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>StreamProviderPage()));
                   }, child: Text('StreamProvider Page',style: TextStyle(color: Colors.blue),),),
+              MaterialButton(onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ChangeNotifierProviderPage()));
+                  }, child: Text('Change Notifier Provider Page',style: TextStyle(color: Colors.blue),),),
             ],
           ),
         ),
