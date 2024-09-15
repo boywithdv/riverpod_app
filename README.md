@@ -2,25 +2,29 @@
 
 Flutter Riverpod Study Projects
 
+https://zenn.dev/riscait/books/flutter-riverpod-practical-introduction/viewer/introduction
+
+Riverpod code is written in reference to the above URL
+
 ## Getting Started
 
-- [ ] はじめに
-- [ ] 更新履歴
-- [ ] 環境について
-- [ ] Riverpodとは
-- [ ] Riverpodの選び方とインストール
-- [ ] コード生成を使ったProvider生成の選び方
-- [ ] 各Providerの役割と使いわけ
-- [ ] riverpod_generatorを使ってプロバイダを簡潔な記法で生成する
-- [ ] NotifierProviderで「状態」を購読・複雑にする
-- [ ] AsyncNotifierProviderで非同期の「状態」を初期化、操作する
-- [ ] Consumerで再構築の範囲を制限する
-- [ ] ref.readでwatchせずにProviderを利用する
-- [ ] ref.listen/listenManualでProviderを利用する
-- [ ] ref.refresh/invalidateでプロバイダを更新し、最新の値を得る
-- [ ] Selectを使ってState更新の再構築を最適化する
-- [ ] StateProviderでシンプルに状態を購読・変更する
-- [ ] StateNotifierProviderで状態を購読・複雑に操作する
+- [x] はじめに
+- [x] 更新履歴
+- [x] 環境について
+- [x] Riverpodとは
+- [x] Riverpodの選び方とインストール
+- [x] コード生成を使ったProvider生成の選び方
+- [x] 各Providerの役割と使いわけ
+- [x] riverpod_generatorを使ってプロバイダを簡潔な記法で生成する
+- [x] NotifierProviderで「状態」を購読・複雑にする
+- [x] AsyncNotifierProviderで非同期の「状態」を初期化、操作する
+- [x] Consumerで再構築の範囲を制限する
+- [x] ref.readでwatchせずにProviderを利用する
+- [x] ref.listen/listenManualでProviderを利用する
+- [x] ref.refresh/invalidateでプロバイダを更新し、最新の値を得る
+- [x] Selectを使ってState更新の再構築を最適化する
+- [x] StateProviderでシンプルに状態を購読・変更する
+- [x] StateNotifierProviderで状態を購読・複雑に操作する
 - [ ] FutureProviderで非同期処理を購読する
 - [ ] StreamProviderでStreamを購読する
 - [ ] ChangeNotifierProviderで状態を購読・操作する
@@ -37,3 +41,9 @@ Flutter Riverpod Study Projects
 - [ ] アプリのライフサイクルを監視するProvider
 - [ ] Freezedとは
 - [ ] Riverpod v3.0の変更点
+- [ ] Riverpod v2.0.0の変更点(v1.x.xとの比較)
+- [ ] riverpod_cliを使ってマイグレーション
+- [ ] RiverpodのTest tips
+- [ ] RiverpodのTips
+- [ ] 終わりに
+- [ ] 用語集
