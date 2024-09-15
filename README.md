@@ -2,6 +2,10 @@
 
 Flutter Riverpod Study Projects
 
+https://zenn.dev/riscait/books/flutter-riverpod-practical-introduction/viewer/introduction
+
+Riverpod code is written in reference to the above URL
+
 ## Getting Started
 
 - [ ] はじめに
@@ -37,3 +41,9 @@ Flutter Riverpod Study Projects
 - [ ] アプリのライフサイクルを監視するProvider
 - [ ] Freezedとは
 - [ ] Riverpod v3.0の変更点
+- [ ] Riverpod v2.0.0の変更点(v1.x.xとの比較)
+- [ ] riverpod_cliを使ってマイグレーション
+- [ ] RiverpodのTest tips
+- [ ] RiverpodのTips
+- [ ] 終わりに
+- [ ] 用語集
