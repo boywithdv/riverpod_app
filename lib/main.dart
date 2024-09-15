@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_app/features/my_provider.dart';
 
-import 'package:riverpod_app/pages/consumer_widget_sample_page.dart';
-import 'package:riverpod_app/pages/counter_state_provider_page.dart';
-import 'package:riverpod_app/pages/use_ref_listenManual_provider_page.dart';
-import 'package:riverpod_app/pages/use_ref_listen_provider_page.dart';
+import 'package:riverpod_app/pages/provider/consumer_widget_sample_page.dart';
+import 'package:riverpod_app/pages/provider/counter_state_provider_page.dart';
+import 'package:riverpod_app/pages/provider/use_ref_listenManual_provider_page.dart';
+import 'package:riverpod_app/pages/provider/use_ref_listen_provider_page.dart';
 import 'features/features.dart';
-import 'pages/state_notifier_provider_page.dart';
+import 'pages/provider/state_notifier_provider_page.dart';
 
 
 
