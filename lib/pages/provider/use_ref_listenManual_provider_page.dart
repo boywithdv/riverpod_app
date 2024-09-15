@@ -32,6 +32,7 @@ class UseRefListenmanualProviderPage extends ConsumerWidget {
           // エラーハンドリング（省略可能）
           onError: (error, stackTrace) => print('Error: $error'),
         );
+      return null;
     },[]);
     return Scaffold(
       appBar: AppBar(title: Text('UseRefListenmanualProviderPage'),),
