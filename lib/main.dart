@@ -8,15 +8,25 @@ import 'package:riverpod_app/pages/provider/counter_state_provider_page.dart';
 import 'package:riverpod_app/pages/provider/flutter_hooks_page.dart';
 import 'package:riverpod_app/pages/provider/product_detail_page.dart';
 import 'package:riverpod_app/pages/provider/provider_scope_page.dart';
+import 'package:riverpod_app/pages/provider/shared_preferences_cache_provider_page.dart';
 import 'package:riverpod_app/pages/provider/stream_provider_page.dart';
 import 'package:riverpod_app/pages/provider/use_ref_listen_provider_page.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'features/features.dart';
 import 'pages/provider/state_notifier_provider_page.dart';
+import 'top_level_providers/shared_preferences.dart';
 
 
 
-void main() {
-  runApp(const ProviderScope(child:  MyApp()));
+Future<void> main() async{
+  // runApp 関数が終わる前に何か処理を実行する場合には ` ensureInitialized()`メソッドを追記する
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp( ProviderScope(overrides: [
+    // SharedPreferencesProviderでSharedPreferencesのインスタンスに差し替える
+    sharedPreferencesProvider.overrideWithValue(
+    // ここでインスタンス化し、Providerの値を上書きする
+    await SharedPreferences.getInstance(),
+  )],child:  MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -100,6 +110,9 @@ class MyHomePage extends ConsumerWidget {
               MaterialButton(onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>FlutterHooksPage()));
                   }, child: Text('Flutter Hooks Page',style: TextStyle(color: Colors.blue),),),
+              MaterialButton(onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>SharedPreferencesCacheProviderPage()));
+                  }, child: Text('SharedPreferences Cache Provider Page',style: TextStyle(color: Colors.blue),),),
             ],
           ),
         ),
