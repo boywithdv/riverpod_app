@@ -30,8 +30,8 @@ Riverpod code is written in reference to the above URL
 - [x] ChangeNotifierProviderで状態を購読・操作する
 - [x] AutoDispose修飾子で、Providerを自動破棄させる
 - [x] ProviderScopeを使って特定の範囲内で状態を上書きする
-- [ ] Flutter Hooksとは
-- [ ] SharedPreferencesのインスタンスをProviderでキャッシュする
+- [x] Flutter Hooksとは
+- [x] SharedPreferencesのインスタンスをProviderでキャッシュする
 - [ ] StateNotifierProviderでTheme(ライト・ダーク)を切り替える
 - [ ] Providerとoverridesを使ってflavorをアプリ内で使用する
 - [ ] StateNotifierProviderでが、円に対するViewModelを作成する
