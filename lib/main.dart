@@ -5,10 +5,10 @@ import 'package:riverpod_app/pages/provider/change_notifier_provider_page.dart';
 
 import 'package:riverpod_app/pages/provider/consumer_widget_sample_page.dart';
 import 'package:riverpod_app/pages/provider/counter_state_provider_page.dart';
+import 'package:riverpod_app/pages/provider/flutter_hooks_page.dart';
 import 'package:riverpod_app/pages/provider/product_detail_page.dart';
 import 'package:riverpod_app/pages/provider/provider_scope_page.dart';
 import 'package:riverpod_app/pages/provider/stream_provider_page.dart';
-import 'package:riverpod_app/pages/provider/use_ref_listenManual_provider_page.dart';
 import 'package:riverpod_app/pages/provider/use_ref_listen_provider_page.dart';
 import 'features/features.dart';
 import 'pages/provider/state_notifier_provider_page.dart';
@@ -97,6 +97,9 @@ class MyHomePage extends ConsumerWidget {
               MaterialButton(onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>ProviderScopePage()));
                   }, child: Text('Provider Scope Page',style: TextStyle(color: Colors.blue),),),
+              MaterialButton(onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>FlutterHooksPage()));
+                  }, child: Text('Flutter Hooks Page',style: TextStyle(color: Colors.blue),),),
             ],
           ),
         ),
