@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_app/features/my_provider.dart';
+import 'package:riverpod_app/pages/provider/api_response_food_page.dart';
 import 'package:riverpod_app/pages/provider/change_notifier_provider_page.dart';
 
 import 'package:riverpod_app/pages/provider/consumer_widget_sample_page.dart';
@@ -113,6 +113,9 @@ class MyHomePage extends ConsumerWidget {
               MaterialButton(onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>SharedPreferencesCacheProviderPage()));
                   }, child: Text('SharedPreferences Cache Provider Page',style: TextStyle(color: Colors.blue),),),
+              MaterialButton(onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ApiResponseFoodPage()));
+                  }, child: Text('Api Response Food Page',style: TextStyle(color: Colors.blue),),),
             ],
           ),
         ),
