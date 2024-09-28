@@ -7,10 +7,17 @@ part 'food.g.dart';
 @freezed
 class Food with _$Food {
   const factory Food({
+    /// 果物名。
     required String foodName,
+
+    /// 果物の説明。
     required String description,
-     String? image,
-    required String place,
+
+    /// 果物の画像URL。
+    String? image,
+
+    /// 果物の価格。
+    required int price,
   }) = _Food;
 
   factory Food.fromJson(Map<String, dynamic> json) =>

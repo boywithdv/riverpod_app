@@ -10,7 +10,7 @@ _$FoodImpl _$$FoodImplFromJson(Map<String, dynamic> json) => _$FoodImpl(
       foodName: json['foodName'] as String,
       description: json['description'] as String,
       image: json['image'] as String?,
-      place: json['place'] as String,
+      price: (json['price'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$FoodImplToJson(_$FoodImpl instance) =>
@@ -18,5 +18,5 @@ Map<String, dynamic> _$$FoodImplToJson(_$FoodImpl instance) =>
       'foodName': instance.foodName,
       'description': instance.description,
       'image': instance.image,
-      'place': instance.place,
+      'price': instance.price,
     };

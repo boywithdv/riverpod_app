@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_app/features/food_provider.dart';
 
@@ -15,20 +16,21 @@ class ApiResponseFoodPage extends ConsumerWidget {
         data: (foods) {
           return Padding(
             padding: const EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  foods.data.first.foodName,
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                ),
-                SizedBox(height: 16),
-                Text(
-                  foods.data.first.description,
-                  style: TextStyle(fontSize: 16),
-                ),
-                SizedBox(height: 16),
-              ],
+            child: ListView.builder(
+              itemCount: foods.data.length,
+              itemBuilder: (context, index) {
+                final food = foods.data[index];
+                return Column(
+                  children: [
+                    ListTile(
+                      title: Text(food.foodName),
+                      subtitle: Text(food.description),
+                    ),
+                    const Gap(8),
+                    const Divider(),
+                  ],
+                );
+              },
             ),
           );
         },

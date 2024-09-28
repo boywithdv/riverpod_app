@@ -20,10 +20,17 @@ Food _$FoodFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Food {
+  /// 果物名。
   String get foodName => throw _privateConstructorUsedError;
+
+  /// 果物の説明。
   String get description => throw _privateConstructorUsedError;
+
+  /// 果物の画像URL。
   String? get image => throw _privateConstructorUsedError;
-  String get place => throw _privateConstructorUsedError;
+
+  /// 果物の価格。
+  int get price => throw _privateConstructorUsedError;
 
   /// Serializes this Food to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -39,7 +46,7 @@ abstract class $FoodCopyWith<$Res> {
   factory $FoodCopyWith(Food value, $Res Function(Food) then) =
       _$FoodCopyWithImpl<$Res, Food>;
   @useResult
-  $Res call({String foodName, String description, String? image, String place});
+  $Res call({String foodName, String description, String? image, int price});
 }
 
 /// @nodoc
@@ -60,7 +67,7 @@ class _$FoodCopyWithImpl<$Res, $Val extends Food>
     Object? foodName = null,
     Object? description = null,
     Object? image = freezed,
-    Object? place = null,
+    Object? price = null,
   }) {
     return _then(_value.copyWith(
       foodName: null == foodName
@@ -75,10 +82,10 @@ class _$FoodCopyWithImpl<$Res, $Val extends Food>
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String?,
-      place: null == place
-          ? _value.place
-          : place // ignore: cast_nullable_to_non_nullable
-              as String,
+      price: null == price
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -90,7 +97,7 @@ abstract class _$$FoodImplCopyWith<$Res> implements $FoodCopyWith<$Res> {
       __$$FoodImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String foodName, String description, String? image, String place});
+  $Res call({String foodName, String description, String? image, int price});
 }
 
 /// @nodoc
@@ -108,7 +115,7 @@ class __$$FoodImplCopyWithImpl<$Res>
     Object? foodName = null,
     Object? description = null,
     Object? image = freezed,
-    Object? place = null,
+    Object? price = null,
   }) {
     return _then(_$FoodImpl(
       foodName: null == foodName
@@ -123,10 +130,10 @@ class __$$FoodImplCopyWithImpl<$Res>
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String?,
-      place: null == place
-          ? _value.place
-          : place // ignore: cast_nullable_to_non_nullable
-              as String,
+      price: null == price
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -138,23 +145,30 @@ class _$FoodImpl implements _Food {
       {required this.foodName,
       required this.description,
       this.image,
-      required this.place});
+      required this.price});
 
   factory _$FoodImpl.fromJson(Map<String, dynamic> json) =>
       _$$FoodImplFromJson(json);
 
+  /// 果物名。
   @override
   final String foodName;
+
+  /// 果物の説明。
   @override
   final String description;
+
+  /// 果物の画像URL。
   @override
   final String? image;
+
+  /// 果物の価格。
   @override
-  final String place;
+  final int price;
 
   @override
   String toString() {
-    return 'Food(foodName: $foodName, description: $description, image: $image, place: $place)';
+    return 'Food(foodName: $foodName, description: $description, image: $image, price: $price)';
   }
 
   @override
@@ -167,13 +181,13 @@ class _$FoodImpl implements _Food {
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.image, image) || other.image == image) &&
-            (identical(other.place, place) || other.place == place));
+            (identical(other.price, price) || other.price == price));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, foodName, description, image, place);
+      Object.hash(runtimeType, foodName, description, image, price);
 
   /// Create a copy of Food
   /// with the given fields replaced by the non-null parameter values.
@@ -196,18 +210,25 @@ abstract class _Food implements Food {
       {required final String foodName,
       required final String description,
       final String? image,
-      required final String place}) = _$FoodImpl;
+      required final int price}) = _$FoodImpl;
 
   factory _Food.fromJson(Map<String, dynamic> json) = _$FoodImpl.fromJson;
 
+  /// 果物名。
   @override
   String get foodName;
+
+  /// 果物の説明。
   @override
   String get description;
+
+  /// 果物の画像URL。
   @override
   String? get image;
+
+  /// 果物の価格。
   @override
-  String get place;
+  int get price;
 
   /// Create a copy of Food
   /// with the given fields replaced by the non-null parameter values.
