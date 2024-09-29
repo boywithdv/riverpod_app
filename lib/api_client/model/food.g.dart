@@ -9,7 +9,9 @@ part of 'food.dart';
 _$FoodImpl _$$FoodImplFromJson(Map<String, dynamic> json) => _$FoodImpl(
       foodName: json['foodName'] as String,
       description: json['description'] as String,
-      image: json['image'] as String?,
+      image: (json['image'] as List<dynamic>?)
+          ?.map((e) => ImageData.fromJson(e as Map<String, dynamic>))
+          .toList(),
       price: (json['price'] as num).toInt(),
     );
 

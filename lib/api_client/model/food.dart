@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:riverpod_app/api_client/model/image_data.dart';
 
 part 'food.freezed.dart';
 part 'food.g.dart';
@@ -14,7 +15,7 @@ class Food with _$Food {
     required String description,
 
     /// 果物の画像URL。
-    String? image,
+    List<ImageData>? image,
 
     /// 果物の価格。
     required int price,

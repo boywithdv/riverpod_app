@@ -14,7 +14,7 @@ Future<Data<List<Food>>> foods(
   int limit = 25,
 }) async {
   final r = await ref.watch(apiClientProvider).getFoods(
-        populate: '',
+        populate: 'image',
       );
   return r;
 }

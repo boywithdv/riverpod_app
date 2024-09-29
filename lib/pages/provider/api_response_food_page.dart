@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -27,6 +28,10 @@ class ApiResponseFoodPage extends ConsumerWidget {
                       subtitle: Text(food.description),
                     ),
                     const Gap(8),
+                    Text(food.image?.first.id.toString() ?? 'dd'),
+                    if (food.image?.first.url case final String url)
+                    /// https://ではないのでここはエラーが発生する模様。
+                      CachedNetworkImage(imageUrl:'localhost:1337$url'),
                     const Divider(),
                   ],
                 );

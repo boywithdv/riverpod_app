@@ -27,7 +27,7 @@ mixin _$Food {
   String get description => throw _privateConstructorUsedError;
 
   /// 果物の画像URL。
-  String? get image => throw _privateConstructorUsedError;
+  List<ImageData>? get image => throw _privateConstructorUsedError;
 
   /// 果物の価格。
   int get price => throw _privateConstructorUsedError;
@@ -46,7 +46,8 @@ abstract class $FoodCopyWith<$Res> {
   factory $FoodCopyWith(Food value, $Res Function(Food) then) =
       _$FoodCopyWithImpl<$Res, Food>;
   @useResult
-  $Res call({String foodName, String description, String? image, int price});
+  $Res call(
+      {String foodName, String description, List<ImageData>? image, int price});
 }
 
 /// @nodoc
@@ -81,7 +82,7 @@ class _$FoodCopyWithImpl<$Res, $Val extends Food>
       image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as List<ImageData>?,
       price: null == price
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
@@ -97,7 +98,8 @@ abstract class _$$FoodImplCopyWith<$Res> implements $FoodCopyWith<$Res> {
       __$$FoodImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String foodName, String description, String? image, int price});
+  $Res call(
+      {String foodName, String description, List<ImageData>? image, int price});
 }
 
 /// @nodoc
@@ -127,9 +129,9 @@ class __$$FoodImplCopyWithImpl<$Res>
           : description // ignore: cast_nullable_to_non_nullable
               as String,
       image: freezed == image
-          ? _value.image
+          ? _value._image
           : image // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as List<ImageData>?,
       price: null == price
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
@@ -144,8 +146,9 @@ class _$FoodImpl implements _Food {
   const _$FoodImpl(
       {required this.foodName,
       required this.description,
-      this.image,
-      required this.price});
+      final List<ImageData>? image,
+      required this.price})
+      : _image = image;
 
   factory _$FoodImpl.fromJson(Map<String, dynamic> json) =>
       _$$FoodImplFromJson(json);
@@ -159,8 +162,17 @@ class _$FoodImpl implements _Food {
   final String description;
 
   /// 果物の画像URL。
+  final List<ImageData>? _image;
+
+  /// 果物の画像URL。
   @override
-  final String? image;
+  List<ImageData>? get image {
+    final value = _image;
+    if (value == null) return null;
+    if (_image is EqualUnmodifiableListView) return _image;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   /// 果物の価格。
   @override
@@ -180,14 +192,14 @@ class _$FoodImpl implements _Food {
                 other.foodName == foodName) &&
             (identical(other.description, description) ||
                 other.description == description) &&
-            (identical(other.image, image) || other.image == image) &&
+            const DeepCollectionEquality().equals(other._image, _image) &&
             (identical(other.price, price) || other.price == price));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, foodName, description, image, price);
+  int get hashCode => Object.hash(runtimeType, foodName, description,
+      const DeepCollectionEquality().hash(_image), price);
 
   /// Create a copy of Food
   /// with the given fields replaced by the non-null parameter values.
@@ -209,7 +221,7 @@ abstract class _Food implements Food {
   const factory _Food(
       {required final String foodName,
       required final String description,
-      final String? image,
+      final List<ImageData>? image,
       required final int price}) = _$FoodImpl;
 
   factory _Food.fromJson(Map<String, dynamic> json) = _$FoodImpl.fromJson;
@@ -224,7 +236,7 @@ abstract class _Food implements Food {
 
   /// 果物の画像URL。
   @override
-  String? get image;
+  List<ImageData>? get image;
 
   /// 果物の価格。
   @override
