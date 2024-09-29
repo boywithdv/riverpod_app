@@ -29,9 +29,7 @@ class ApiResponseFoodPage extends ConsumerWidget {
                     ),
                     const Gap(8),
                     Text(food.image?.first.id.toString() ?? 'dd'),
-                    if (food.image?.first.url case final String url)
-                    /// https://ではないのでここはエラーが発生する模様。
-                      CachedNetworkImage(imageUrl:'localhost:1337$url'),
+                    CachedNetworkImage(imageUrl:'https://loremflickr.com/g/320/240/paris,girl/all'),
                     const Divider(),
                   ],
                 );
