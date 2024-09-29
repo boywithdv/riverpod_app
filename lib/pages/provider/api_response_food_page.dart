@@ -71,12 +71,10 @@ class _ApiResponseFoodPageState extends ConsumerState<ApiResponseFoodPage> {
                       errorWidget: (context, url, error) {
                         return Column(
                           children: [
-                            Icon(Icons.error),
-                            Text('Failed to load image.'),
                             ElevatedButton(
                               // 画像の再読み込みを行う
                               onPressed: _reloadImage, 
-                              child: Text('Retry'),
+                              child: Text('再読み込みを行う'),
                             ),
                           ],
                         );
