@@ -8,12 +8,6 @@ part of 'theme_selector_provider.dart';
 
 String _$themeSelectorHash() => r'48fc54b4fc30c87d31c8e505ec2b0bb0102b2b5b';
 
-/// themeの選択はStateNotifierProviderを使って実装
-/// なぜ？
-/// ユーザが選択したテーマの状態を一時的に保持するためには保持領域に記憶する必要がある
-/// 記憶領域への保存とアプリ起動時に取得することが必要になる
-///
-/// sharedPreferenceを使ってテーマの選択を保存する
 /// Provider for selecting the theme.
 ///
 /// Copied from [ThemeSelector].

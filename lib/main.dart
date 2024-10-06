@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_app/pages/provider/api_response_food_page.dart';
-import 'package:riverpod_app/pages/provider/change_notifier_provider_page.dart';
+import 'package:riverpod_app/pages/api_response_food_page.dart';
+import 'package:riverpod_app/pages/change_notifier_provider_page.dart';
 
-import 'package:riverpod_app/pages/provider/consumer_widget_sample_page.dart';
-import 'package:riverpod_app/pages/provider/counter_state_provider_page.dart';
-import 'package:riverpod_app/pages/provider/flutter_hooks_page.dart';
-import 'package:riverpod_app/pages/provider/product_detail_page.dart';
-import 'package:riverpod_app/pages/provider/provider_scope_page.dart';
-import 'package:riverpod_app/pages/provider/shared_preferences_cache_provider_page.dart';
-import 'package:riverpod_app/pages/provider/stream_provider_page.dart';
-import 'package:riverpod_app/pages/provider/use_ref_listen_provider_page.dart';
+import 'package:riverpod_app/pages/consumer_widget_sample_page.dart';
+import 'package:riverpod_app/pages/counter_state_provider_page.dart';
+import 'package:riverpod_app/pages/flutter_hooks_page.dart';
+import 'package:riverpod_app/pages/product_detail_page.dart';
+import 'package:riverpod_app/pages/provider_scope_page.dart';
+import 'package:riverpod_app/pages/shared_preferences_cache_provider_page.dart';
+import 'package:riverpod_app/pages/stream_provider_page.dart';
+import 'package:riverpod_app/pages/use_ref_listen_provider_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'features/features.dart';
-import 'pages/provider/state_notifier_provider_page.dart';
+import 'pages/state_notifier_provider_page.dart';
 import 'top_level_providers/shared_preferences.dart';
 
 

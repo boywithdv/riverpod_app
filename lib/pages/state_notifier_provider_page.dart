@@ -4,7 +4,7 @@ import 'package:clock/clock.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../entries/todo.dart';
+import '../entries/todo.dart';
 
 // StateNotifierProviderは専用のファイル作成して書いてもいいし、TodolistNotifierと同じファイル内に書いてもいい
 final todoListNotifierProvider =
