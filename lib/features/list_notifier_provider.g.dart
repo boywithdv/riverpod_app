@@ -1,0 +1,25 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'list_notifier_provider.dart';
+
+// **************************************************************************
+// RiverpodGenerator
+// **************************************************************************
+
+String _$s2NotifierHash() => r'e94143d06d84a471962d2b6a01fe72af7286c412';
+
+/// See also [S2Notifier].
+@ProviderFor(S2Notifier)
+final s2NotifierProvider =
+    AutoDisposeNotifierProvider<S2Notifier, List<String>>.internal(
+  S2Notifier.new,
+  name: r's2NotifierProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$s2NotifierHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef _$S2Notifier = AutoDisposeNotifier<List<String>>;
+// ignore_for_file: type=lint
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
