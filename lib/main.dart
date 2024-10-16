@@ -13,6 +13,7 @@ import 'package:riverpod_app/pages/stream_provider_page.dart';
 import 'package:riverpod_app/pages/use_ref_listen_provider_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'features/features.dart';
+import 'pages/notifier_page.dart';
 import 'pages/state_notifier_provider_page.dart';
 import 'top_level_providers/shared_preferences.dart';
 
@@ -63,6 +64,9 @@ class MyHomePage extends ConsumerWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              MaterialButton(onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>NotifierPage()));
+                  }, child: Text('Notifier Page',style: TextStyle(color: Colors.blue),),),
               Consumer(
                 builder: (context, watch, _) {
                   final myData = ref.watch(myProvider);
