@@ -9,6 +9,7 @@ import 'package:riverpod_app/pages/flutter_hooks_page.dart';
 import 'package:riverpod_app/pages/product_detail_page.dart';
 import 'package:riverpod_app/pages/provider_scope_page.dart';
 import 'package:riverpod_app/pages/shared_preferences_cache_provider_page.dart';
+import 'package:riverpod_app/pages/state_provider_sample_page.dart';
 import 'package:riverpod_app/pages/stream_provider_page.dart';
 import 'package:riverpod_app/pages/use_ref_listen_provider_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -60,9 +61,10 @@ class MyHomePage extends ConsumerWidget {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: Text(appName),
         ),
-        body: Center(
+        body: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            
             children: <Widget>[
               MaterialButton(onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>NotifierPage()));
@@ -120,6 +122,9 @@ class MyHomePage extends ConsumerWidget {
               MaterialButton(onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>ApiResponseFoodPage()));
                   }, child: Text('Api Response Food Page',style: TextStyle(color: Colors.blue),),),
+              MaterialButton(onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>StateProviderSamplePage()));
+                  }, child: Text('State Provider Page',style: TextStyle(color: Colors.blue),),),
             ],
           ),
         ),
