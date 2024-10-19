@@ -6,7 +6,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../entries/todo.dart';
 
-// StateNotifierProviderは専用のファイル作成して書いてもいいし、TodolistNotifierと同じファイル内に書いてもいい
+// StateNotifierProviderは専用のファイル作成して書いてもいいし、TodoListNotifierと同じファイル内に書いてもいい
 final todoListNotifierProvider =
     StateNotifierProvider<TodoListNotifier, List<Todo>>((ref) {
   return TodoListNotifier();
