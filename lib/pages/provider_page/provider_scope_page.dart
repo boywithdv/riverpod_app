@@ -29,7 +29,7 @@ class TodoItemTile extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context,WidgetRef ref) {
-    // TODOアイテムのIndexを取得
+    // TodoアイテムのIndexを取得
     final index = ref.watch(currentTodoIndex);
     return ListTile(
       title: Text('Item $index'),
