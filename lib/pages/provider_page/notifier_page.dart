@@ -3,7 +3,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_app/features/future_notifier_provider.dart';
 import 'package:riverpod_app/features/int_notifier_provider.dart';
 
-import '../features/list_notifier_provider.dart';
+import '../../features/list_notifier_provider.dart';
 
 
 class NotifierPage extends ConsumerWidget {
