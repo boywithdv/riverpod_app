@@ -70,6 +70,7 @@ class FlutterApp extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AppButton(buttonType: AppButtonType.AppButton,onPressed: ()async{
+              // AppButtonのページに遷移する。
                 await Navigator.push(
                   context,
                   MaterialPageRoute<void>(
