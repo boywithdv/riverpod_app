@@ -1,21 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_app/pages/provider_page/api_response_food_page.dart';
-import 'package:riverpod_app/pages/provider_page/change_notifier_provider_page.dart';
-
-import 'package:riverpod_app/pages/provider_page/consumer_widget_sample_page.dart';
-import 'package:riverpod_app/pages/provider_page/counter_state_provider_page.dart';
-import 'package:riverpod_app/pages/provider_page/flutter_hooks_page.dart';
-import 'package:riverpod_app/pages/provider_page/product_detail_page.dart';
-import 'package:riverpod_app/pages/provider_page/provider_scope_page.dart';
-import 'package:riverpod_app/pages/provider_page/shared_preferences_cache_provider_page.dart';
-import 'package:riverpod_app/pages/provider_page/stream_provider_page.dart';
-import 'package:riverpod_app/pages/provider_page/use_ref_listen_provider_page.dart';
+import 'package:riverpod_app/pages/enum_page/enum_main_page.dart';
+import 'package:riverpod_app/pages/main/main_page.dart';
+import 'package:riverpod_app/widgets/button/button.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'features/features.dart';
-import 'pages/provider_page/notifier_page.dart';
-import 'pages/provider_page/state_notifier_provider_page.dart';
+
 import 'top_level_providers/shared_preferences.dart';
+import 'widgets/button/app_button_type.dart';
 
 
 
@@ -42,93 +33,53 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  MyHomePage(),
+      home:  FlutterApp(),
     );
   }
 }
 
-class MyHomePage extends ConsumerWidget {
-  const MyHomePage({super.key});
 
+class FlutterApp extends StatelessWidget {
+  const FlutterApp({super.key});
 
   @override
-  Widget build(BuildContext context,WidgetRef ref) {
-    final appName = ref.watch(appNameProvider);
-    final doubleCounter = ref.watch(doubleCounterProvider);
+  Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Text(appName),
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              MaterialButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>NotifierPage()));
-                  }, child: Text('Notifier Page',style: TextStyle(color: Colors.blue),),),
-              Consumer(
-                builder: (context, watch, _) {
-                  final myData = ref.watch(myProvider);
-                  return Text(
-                    myData.value,
-                    style: Theme.of(context).textTheme.headlineMedium,
-                  );
-                },
-              ),
-              Text('Double Counter Provider Value:$doubleCounter',
-                  style: Theme.of(context).textTheme.headlineMedium),
-              MaterialButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ComsumerWidgetSample()));
-                  }, child: Text('Consumer Widget Sample Page',style: TextStyle(color: Colors.blue),),),
-                            Text('Double Counter Provider Value:$doubleCounter',
-                  style: Theme.of(context).textTheme.headlineMedium),
-              MaterialButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>UseRefListenProviderPage()));
-                  }, child: Text('Use ref listen provider Page',style: TextStyle(color: Colors.blue),),),
-              /*
-              // ref.listenManualを使ったページ
-              MaterialButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>UseRefListenmanualProviderPage()));
-                  }, child: Text('Use ref listenManual provider Page',style: TextStyle(color: Colors.blue),),),
-              */
-              MaterialButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>CounterStateProviderPage()));
-                  }, child: Text('Use ref listenManual provider Page',style: TextStyle(color: Colors.blue),),),
-              // StateNotifierProviderを使ったページ
-              MaterialButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>StateNotifierProviderPage()));
-                  }, child: Text('StateNotifierProvider Page',style: TextStyle(color: Colors.blue),),),
-              MaterialButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>StreamProviderPage()));
-                  }, child: Text('StreamProvider Page',style: TextStyle(color: Colors.blue),),),
-              MaterialButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ChangeNotifierProviderPage()));
-                  }, child: Text('Change Notifier Provider Page',style: TextStyle(color: Colors.blue),),),
-              MaterialButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ProductDetailPage()));
-                  }, child: Text('Product Detail Page',style: TextStyle(color: Colors.blue),),),
-              MaterialButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ProviderScopePage()));
-                  }, child: Text('Provider Scope Page',style: TextStyle(color: Colors.blue),),),
-              MaterialButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>FlutterHooksPage()));
-                  }, child: Text('Flutter Hooks Page',style: TextStyle(color: Colors.blue),),),
-              MaterialButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>SharedPreferencesCacheProviderPage()));
-                  }, child: Text('SharedPreferences Cache Provider Page',style: TextStyle(color: Colors.blue),),),
-              MaterialButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ApiResponseFoodPage()));
-                  }, child: Text('Api Response Food Page',style: TextStyle(color: Colors.blue),),),
-            ],
+      appBar:AppBar(
+        actions: [
+          InkWell(
+            onTap: () async {
+                await Navigator.push(
+                  context,
+                  MaterialPageRoute<void>(
+                    builder: (context) => const RiverpodSamplePage(),
+                  ),
+                );
+              },
+            child: Row(
+              children: [
+                Icon(Icons.bug_report),
+                Text('Riverpod App'),
+              ],
+            ),
           ),
+        ],
+      ) ,
+      body: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            AppButton(buttonType: AppButtonType.AppButton,onPressed: ()async{
+                await Navigator.push(
+                  context,
+                  MaterialPageRoute<void>(
+                    builder: (context) => const EnumMainPage(),
+                  ),
+                );
+            },),
+          ],
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-          },
-          tooltip: 'Increment',
-          child: const Icon(Icons.add),
-        ),
-      );
+      ),
+    );
   }
 }
