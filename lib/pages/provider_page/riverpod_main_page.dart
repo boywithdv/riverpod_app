@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../features/features.dart';
-import '../provider_page/provider_page.dart';
+import 'provider_page.dart';
 
 
-class RiverpodSamplePage extends ConsumerWidget {
-  const RiverpodSamplePage({super.key});
+class RiverpodMainPage extends ConsumerWidget {
+  const RiverpodMainPage({super.key});
 
 
   @override

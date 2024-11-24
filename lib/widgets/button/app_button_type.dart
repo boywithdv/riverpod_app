@@ -7,6 +7,7 @@ enum AppButtonType {
   ReadButton(height: 56,width: 100,borderRadius:10),
   DeleteButton(height: 56,width: 100,borderRadius:10),
   AppButton(height: 56,width: 100,borderRadius: 10),
+  PagingStateProviderButton(height:56,width: 100,borderRadius: 10),
   ;
 
   const AppButtonType({
@@ -32,6 +33,7 @@ enum AppButtonType {
       AppButtonType.ReadButton => 'Read',
       AppButtonType.DeleteButton => 'Delete',
       AppButtonType.AppButton => 'AppButton',
+      AppButtonType.PagingStateProviderButton => 'PagingStateProviderButton',
     };
   }
 
@@ -43,6 +45,7 @@ enum AppButtonType {
       AppButtonType.ReadButton => TextStyle(color:Colors.green,),
       AppButtonType.DeleteButton => TextStyle(color:Colors.yellow,),
       AppButtonType.AppButton => TextStyle(color:Colors.tealAccent,),
+      AppButtonType.PagingStateProviderButton => TextStyle(color:Colors.tealAccent,),
     };
   }
 
@@ -53,6 +56,7 @@ enum AppButtonType {
       AppButtonType.ReadButton => Colors.black,
       AppButtonType.DeleteButton => Colors.red,
       AppButtonType.AppButton => Colors.blue,
+      AppButtonType.PagingStateProviderButton => Colors.grey,
     };
   }
 
