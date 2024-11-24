@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_app/pages/enum_page/enum_main_page.dart';
-import 'package:riverpod_app/pages/main/main_page.dart';
+import 'package:riverpod_app/pages/provider_page/riverpod_main_page.dart';
+import 'package:riverpod_app/pages/provider_page/paging_state_provider_page/search_page.dart';
 import 'package:riverpod_app/widgets/button/button.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -52,7 +53,7 @@ class FlutterApp extends StatelessWidget {
                 await Navigator.push(
                   context,
                   MaterialPageRoute<void>(
-                    builder: (context) => const RiverpodSamplePage(),
+                    builder: (context) => const RiverpodMainPage(),
                   ),
                 );
               },
@@ -77,7 +78,18 @@ class FlutterApp extends StatelessWidget {
                     builder: (context) => const EnumMainPage(),
                   ),
                 );
-            },),
+            },
+            ),
+            AppButton(buttonType: AppButtonType.PagingStateProviderButton,onPressed: ()async{
+              // AppButtonのページに遷移する。
+                await Navigator.push(
+                  context,
+                  MaterialPageRoute<void>(
+                    builder: (context) => const SearchPage(),
+                  ),
+                );
+            },
+            ),
           ],
         ),
       ),
