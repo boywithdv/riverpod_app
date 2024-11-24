@@ -1,3 +1,4 @@
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:riverpod_app/api_client/model/food.dart';
 
@@ -9,7 +10,7 @@ part 'food_provider.g.dart';
 
 @riverpod
 Future<Data<List<Food>>> foods(
-  FoodsRef ref, {
+  Ref ref, {
   int offset = 0,
   int limit = 25,
 }) async {
