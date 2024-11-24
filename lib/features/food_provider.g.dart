@@ -6,7 +6,7 @@ part of 'food_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$foodsHash() => r'da10166d8286d7fcd7b3a793a3a6442588942656';
+String _$foodsHash() => r'cc2212bb9155adb681686c8fa4aaf029c1bbfaa2';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -153,6 +153,8 @@ class FoodsProvider extends AutoDisposeFutureProvider<Data<List<Food>>> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin FoodsRef on AutoDisposeFutureProviderRef<Data<List<Food>>> {
   /// The parameter `offset` of this provider.
   int get offset;
@@ -171,4 +173,4 @@ class _FoodsProviderElement
   int get limit => (origin as FoodsProvider).limit;
 }
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
