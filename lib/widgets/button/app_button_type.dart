@@ -8,6 +8,7 @@ enum AppButtonType {
   DeleteButton(height: 56,width: 100,borderRadius:10),
   AppButton(height: 56,width: 100,borderRadius: 10),
   PagingStateProviderButton(height:56,width: 100,borderRadius: 10),
+  FirebasePageButton(height:56,width: 100,borderRadius: 10),
   ;
 
   const AppButtonType({
@@ -34,6 +35,7 @@ enum AppButtonType {
       AppButtonType.DeleteButton => 'Delete',
       AppButtonType.AppButton => 'AppButton',
       AppButtonType.PagingStateProviderButton => 'PagingStateProviderButton',
+      AppButtonType.FirebasePageButton => 'FirebasePageButton',
     };
   }
 
@@ -46,6 +48,7 @@ enum AppButtonType {
       AppButtonType.DeleteButton => TextStyle(color:Colors.yellow,),
       AppButtonType.AppButton => TextStyle(color:Colors.tealAccent,),
       AppButtonType.PagingStateProviderButton => TextStyle(color:Colors.tealAccent,),
+      AppButtonType.FirebasePageButton => TextStyle(color:Colors.tealAccent,),
     };
   }
 
@@ -57,6 +60,7 @@ enum AppButtonType {
       AppButtonType.DeleteButton => Colors.red,
       AppButtonType.AppButton => Colors.blue,
       AppButtonType.PagingStateProviderButton => Colors.grey,
+      AppButtonType.FirebasePageButton => Colors.purple,
     };
   }
 
