@@ -2,11 +2,12 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_app/features/firebase/controller/add_post.dart';
+import 'package:riverpod_app/pages/firebase_page/firebase_post_list_tile.dart';
 import 'package:riverpod_app/widgets/appbar/appbar.dart';
 import 'package:riverpod_app/widgets/async_value_body/async_value_body.dart';
 
 import '../../api_client/model/firebase/post.dart';
-import '../../features/firebase/post/post_list_provider.dart';
+import '../../features/firebase/post/posts_provider.dart';
 
 class FirebasePage extends HookConsumerWidget {
   const FirebasePage({super.key});
@@ -30,21 +31,21 @@ class AllPostView extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context,WidgetRef ref) {
-    final post = ref.watch(postListProvider);
+    final post = ref.watch(postsProvider);
     return AsyncValueBody(
       post,
       asyncValue: (posts) {
         return RefreshIndicator(
           onRefresh: (){
-            return ref.refresh(postListProvider.future);
+            return ref.refresh(postsProvider.future);
           },
           child: ListView.builder(
             itemCount: posts.length,
             itemBuilder: (context, index) {
               final post = posts[index];
-              return ListTile(
-                title: Text(post.title),
-                subtitle: Text(post.content),
+              return FirebasePostListTile(
+                title: post.title,
+                content:post.content,
               );
             },
           ),
