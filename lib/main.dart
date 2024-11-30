@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_app/pages/enum_page/enum_main_page.dart';
@@ -6,6 +7,7 @@ import 'package:riverpod_app/pages/provider_page/paging_state_provider_page/sear
 import 'package:riverpod_app/widgets/button/button.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'firebase_options.dart';
 import 'top_level_providers/shared_preferences.dart';
 import 'widgets/button/app_button_type.dart';
 
@@ -14,6 +16,9 @@ import 'widgets/button/app_button_type.dart';
 Future<void> main() async{
   // runApp 関数が終わる前に何か処理を実行する場合には ` ensureInitialized()`メソッドを追記する
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+);
   runApp( ProviderScope(overrides: [
     // SharedPreferencesProviderでSharedPreferencesのインスタンスに差し替える
     sharedPreferencesProvider.overrideWithValue(
