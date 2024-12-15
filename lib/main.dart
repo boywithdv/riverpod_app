@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_app/pages/enum_page/enum_main_page.dart';
+import 'package:riverpod_app/pages/firebase_page/firebase_list_page.dart';
 import 'package:riverpod_app/pages/firebase_page/firebase_page.dart';
 import 'package:riverpod_app/pages/provider_page/riverpod_main_page.dart';
 import 'package:riverpod_app/pages/provider_page/paging_state_provider_page/search_page.dart';
@@ -101,7 +102,7 @@ class FlutterApp extends StatelessWidget {
                 await Navigator.push(
                   context,
                   MaterialPageRoute<void>(
-                    builder: (context) => const FirebasePage(),
+                    builder: (context) => const FirebaseListPage(),
                   ),
                 );
             },

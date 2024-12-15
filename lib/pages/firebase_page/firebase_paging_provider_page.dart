@@ -11,6 +11,20 @@ class FirebasePagingProviderPage extends StatefulWidget {
 class _FirebasePagingProviderPageState extends State<FirebasePagingProviderPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Firebase Paging Provider Page'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const <Widget>[
+            Text(
+              'Firebase Paging Provider Page',
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
