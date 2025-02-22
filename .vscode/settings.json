@@ -1,11 +1,12 @@
 {
-    "cSpell.words": [
-        "Appbar",
-        "autorenew",
-        "Comsumer",
-        "Listenmanual",
-        "Nulll",
-        "prefs",
-        "riverpod"
-    ]
+  "cSpell.words": [
+    "Appbar",
+    "autorenew",
+    "Comsumer",
+    "Listenmanual",
+    "Nulll",
+    "prefs",
+    "riverpod"
+  ],
+  "dart.flutterSdkPath": ".fvm/versions/3.27.1"
 }
