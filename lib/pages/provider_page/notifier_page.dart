@@ -52,10 +52,12 @@ class NotifierPage extends ConsumerWidget {
               )
             ],
           ),
-          InvalidateButton(onTap: () {
-            debugPrint('${s1Notifier} が初期の状態に戻りました。');
-            ref.invalidate(s1NotifierProvider);
-          }),
+          InvalidateButton(
+            onTap: () {
+              debugPrint('${s1Notifier} が初期の状態に戻りました。');
+              ref.invalidate(s1NotifierProvider);
+            },
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -67,6 +69,12 @@ class NotifierPage extends ConsumerWidget {
                   icon: Icon(Icons.add))
             ],
           ),
+          InvalidateButton(
+            onTap: () {
+              debugPrint('${s2Notifier} が初期の状態に戻りました。');
+              ref.invalidate(s2NotifierProvider);
+            },
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -77,6 +85,12 @@ class NotifierPage extends ConsumerWidget {
                   },
                   icon: Icon(Icons.add))
             ],
+          ),
+          InvalidateButton(
+            onTap: () {
+              debugPrint('${s3Notifier} が初期の状態に戻りました。');
+              ref.invalidate(s3NotifierProvider);
+            },
           ),
         ],
       ),
