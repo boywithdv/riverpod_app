@@ -1,49 +1,31 @@
 # riverpod_app
 
-Flutter Riverpod Study Projects
+Flutter × Riverpod 実践学習プロジェクト
 
-https://zenn.dev/riscait/books/flutter-riverpod-practical-introduction/viewer/introduction
+このリポジトリは、[Zenn「Riverpod実践入門」](https://zenn.dev/riscait/books/flutter-riverpod-practical-introduction/viewer/introduction) を参考に、Flutterアプリ開発におけるRiverpodの活用方法を体系的に学ぶためのサンプルコード集です。
 
-Riverpod code is written in reference to the above URL
+## 特徴
 
-## Getting Started
+- Riverpodの各Providerパターンを実践的に学べる
+- コード生成や状態管理のベストプラクティスを体験
+- Firebase連携やテーマ切り替えなど実用的なサンプルも収録
 
-- [x] はじめに
-- [x] 更新履歴
-- [x] 環境について
-- [x] Riverpodとは
-- [x] Riverpodの選び方とインストール
-- [x] コード生成を使ったProvider生成の選び方
-- [x] 各Providerの役割と使いわけ
-- [x] riverpod_generatorを使ってプロバイダを簡潔な記法で生成する
-- [x] NotifierProviderで「状態」を購読・複雑にする
-- [x] AsyncNotifierProviderで非同期の「状態」を初期化、操作する
-- [x] Consumerで再構築の範囲を制限する
-- [x] ref.readでwatchせずにProviderを利用する
-- [x] ref.listen/listenManualでProviderを利用する
-- [x] ref.refresh/invalidateでプロバイダを更新し、最新の値を得る
-- [x] Selectを使ってState更新の再構築を最適化する
-- [x] StateProviderでシンプルに状態を購読・変更する
-- [x] StateNotifierProviderで状態を購読・複雑に操作する
-- [x] FutureProviderで非同期処理を購読する
-- [x] StreamProviderでStreamを購読する
-- [x] ChangeNotifierProviderで状態を購読・操作する
-- [x] AutoDispose修飾子で、Providerを自動破棄させる
-- [x] ProviderScopeを使って特定の範囲内で状態を上書きする
-- [x] Flutter Hooksとは
-- [x] SharedPreferencesのインスタンスをProviderでキャッシュする
-- [ ] StateNotifierProviderでTheme(ライト・ダーク)を切り替える
-- [ ] Providerとoverridesを使ってflavorをアプリ内で使用する
-- [ ] StateNotifierProviderでが、円に対するViewModelを作成する
-- [ ] Userを状態として持つFirebase AuthのControllerを作成する
-- [ ] RemoteConfigを使用した強制アップデート機能 前編「Remote ConfigのProvider」
-- [ ] RemoteConfigを使用したアップデータ催促機能 後編
-- [ ] アプリのライフサイクルを監視するProvider
-- [ ] Freezedとは
-- [ ] Riverpod v3.0の変更点
-- [ ] Riverpod v2.0.0の変更点(v1.x.xとの比較)
-- [ ] riverpod_cliを使ってマイグレーション
-- [ ] RiverpodのTest tips
-- [ ] RiverpodのTips
-- [ ] 終わりに
-- [ ] 用語集
+## 動作環境
+
+- Flutter: 3.x 以上
+- Dart: 3.x 以上
+- macOS: 13 以上推奨
+- Xcode: 14 以上
+- CocoaPods: 1.12 以上
+
+## セットアップ
+
+```sh
+git clone https://github.com/yourname/riverpod_app.git
+cd riverpod_app
+flutter pub get
+cd ios
+pod install
+cd ..
+flutter run
+```
