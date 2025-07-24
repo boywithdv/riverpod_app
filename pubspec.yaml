@@ -83,7 +83,7 @@ dev_dependencies:
   riverpod_generator: ^2.6.5
   riverpod_lint: ^2.6.5
   slang_build_runner: ^4.5.0
-  retrofit_generator: ^9.1.2
+  retrofit_generator: ^9.2.0
 
 flutter_gen:
   output: lib/gen/
