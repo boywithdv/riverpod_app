@@ -45,10 +45,10 @@ packages:
     dependency: "direct main"
     description:
       name: altfire_tracker
-      sha256: d020a1043f49d733e5f4d1a6ece24d9633c77e68a8fb9286bc9c2a51944c763c
+      sha256: bfdca7fc2ef40c69736432fc6d1bd24b7d232588e806470fd867f52fda2e8c43
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.5"
+    version: "1.0.0"
   altive_lints:
     dependency: "direct dev"
     description:
@@ -493,26 +493,26 @@ packages:
     dependency: transitive
     description:
       name: firebase_analytics
-      sha256: "6abce50b79729d8a13c3d4ae05ac612d5ef2f57394330bc5e581ca0e762325f4"
+      sha256: b5b31727ad7c7f41e139637d1d582e435fd14054abcbd162c64476f90737105c
       url: "https://pub.dev"
     source: hosted
-    version: "11.4.3"
+    version: "11.4.6"
   firebase_analytics_platform_interface:
     dependency: transitive
     description:
       name: firebase_analytics_platform_interface
-      sha256: cd9ae65870bf23ab7e63a04fe9c1b38522fd3556a8c32288afd3f5cb10d4b8f4
+      sha256: "86817ee7db6377e09830467932c31644713d8e8915cefff64610ad735612bc7d"
       url: "https://pub.dev"
     source: hosted
-    version: "4.3.3"
+    version: "4.3.6"
   firebase_analytics_web:
     dependency: transitive
     description:
       name: firebase_analytics_web
-      sha256: "5654ed7e39d7a8099e60748924327159785512d78d913e965f9ca93c533af910"
+      sha256: "4914e184a6aa37811d976db59f95fa8fda1d58db49ab7f73d4d8aac9dd9b19b7"
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.10+9"
+    version: "0.5.10+12"
   firebase_auth:
     dependency: transitive
     description:
@@ -565,18 +565,18 @@ packages:
     dependency: transitive
     description:
       name: firebase_crashlytics
-      sha256: "3d4dd8406ee3be734a027503af7dd8d89ad5bddbaf83f4189946ce5ecc0f6aa6"
+      sha256: "49d20b1dd87bb42746e27b5c72c1e3a3d84ae6415d062f8b31ecb71a35d36d0c"
       url: "https://pub.dev"
     source: hosted
-    version: "4.3.3"
+    version: "4.3.6"
   firebase_crashlytics_platform_interface:
     dependency: transitive
     description:
       name: firebase_crashlytics_platform_interface
-      sha256: "3a2b20b4b486fc897e3d89ba785ce2df6e819b4486df660ef0cce499b3d760ca"
+      sha256: "0a5b2c9a662db7563482547b31da06a3951277cbfb42af12c5b52a15456ea951"
       url: "https://pub.dev"
     source: hosted
-    version: "3.8.3"
+    version: "3.8.6"
   firebase_dynamic_links:
     dependency: "direct main"
     description:
