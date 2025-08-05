@@ -60,8 +60,8 @@ dependencies:
   shared_preferences: ^2.3.2
   shimmer: ^3.0.0
   simple_logger: ^1.9.0+1
-  slang: ^4.2.1
-  slang_flutter: ^4.7.0
+  slang: ^4.8.1
+  slang_flutter: ^4.8.0
   sort_key_generator: ^0.2.1
   tuple: ^2.0.0
   url_launcher: ^6.3.0
@@ -82,7 +82,7 @@ dev_dependencies:
   mockito: ^5.4.6
   riverpod_generator: ^2.6.5
   riverpod_lint: ^2.6.5
-  slang_build_runner: ^4.5.0
+  slang_build_runner: ^4.8.0
   retrofit_generator: ^9.2.0
 
 flutter_gen:
