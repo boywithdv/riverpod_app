@@ -22,7 +22,7 @@ environment:
   sdk: ^3.5.1
 
 dependencies:
-  altfire_authenticator: ^0.1.5
+  altfire_authenticator: ^1.0.0
   altfire_configurator: ^1.0.0
   altfire_messenger: ^0.2.0
   altfire_tracker: ^1.0.0
