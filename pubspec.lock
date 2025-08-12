@@ -29,10 +29,10 @@ packages:
     dependency: "direct main"
     description:
       name: altfire_configurator
-      sha256: aeea5c1966483918127e6896e7ae927634508b9c4bfc2059cbaaecfaaff115e1
+      sha256: cfeeb93e152e4a2756b183b488931f0e1bdb06da9e63f2e751a2002ea240f0e0
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.0"
+    version: "1.0.1"
   altfire_messenger:
     dependency: "direct main"
     description:
@@ -661,26 +661,26 @@ packages:
     dependency: transitive
     description:
       name: firebase_remote_config
-      sha256: "6e9846bba1d5bf8b5bea8012c9ab7245371ac956864f422da1ec4c8d95c37554"
+      sha256: e65062f7435c8be13826d38c75218b30251a096ca742e7da55342b33ff8b4749
       url: "https://pub.dev"
     source: hosted
-    version: "5.4.1"
+    version: "5.4.4"
   firebase_remote_config_platform_interface:
     dependency: transitive
     description:
       name: firebase_remote_config_platform_interface
-      sha256: "1272a268434097d5645bb1537f3073c82b58910b4a588bbe88e5eab6005ef144"
+      sha256: "6d2f94570edbea0b1fb47e623af576f1896d14f839b1e3ba9b393a5e7c93c84d"
       url: "https://pub.dev"
     source: hosted
-    version: "1.5.1"
+    version: "1.5.4"
   firebase_remote_config_web:
     dependency: transitive
     description:
       name: firebase_remote_config_web
-      sha256: "122c7e1304787072969b8df84a77684f7c9448e95a6d114868280b6fc18c46fa"
+      sha256: "5cf6eff2748193b64e9eb9965d5d727585f562d2946a53239385ad667e1c22e4"
       url: "https://pub.dev"
     source: hosted
-    version: "1.8.1"
+    version: "1.8.4"
   firebase_storage:
     dependency: "direct main"
     description:
